@@ -1,0 +1,85 @@
+	
+Some of you mailed me about the results that I have posted earlier. The general topic of the mails was about the secant method. They wrote that their algorithms sometimes iterate one more time than the given results and asked what could be the possible causes.
+
+First of all, I used an old code as the key instead of writing a new one and before using it I checked it to confirm the code is written in proper way and it was. However; after I received those mails, I decided to check the code once again. Then I have realized that someone overrode the stopping condition to try something new and I have missed it. Normally, you are supposed to use the difference between two points as the stopping condition but it was overriden. In the hybrid method, the right stopping condition was used and thus, the results of the hybrid method overlap with your results.
+
+Therefore, I have posted the new results here. If you still have different results, it is okay. I will not grade the projects by only taking the results into account. I will check the codes you have written and if it follows the algorithm in a correct way then you will get full credit. However, you should know that the chance of writing a correct algorithm and reaching very different results is very low. 
+
+You can check it once again and you can ask me your further(er) questions via e-mail.
+
+
+
+Input: 
+
+2 2 -7 1 -7 1.5 1.8 0.001 (The one in the project description.)
+
+Output: 
+
+For the Bisection Method: 9 number of iterations and 1.66934 is the root.
+
+For the Secant Method: 4 number of iterations and 1.66941 is the root.
+
+For the Hybrid Method: 5 number of iterations and 1.66941 is the root.
+
+
+
+Input: 
+
+2 2 -7 1 -7 1 2 0.0001 (Same polynomial with the first case but different interval and tolerance.)
+
+Output:
+
+For the Bisection Method: 14 number of iterations and 1.66937 is the root.
+
+For the Secant Method: 7 number of iterations and 1.66941 is the root.
+
+For the Hybrid Method: 6 number of iterations and 1.66941 is the root.
+
+
+
+Input:
+
+3 -5 -5 2 3 2 2.5 0.0001 
+
+Output:
+
+For the Bisection Method: 13 number of iterations and 2.19318 is the root.
+
+For the Secant Method: 6 number of iterations and 2.1932 is the root.
+
+For the Hybrid Method: 6 number of iterations and 2.1932 is the root.
+
+
+
+Input:
+
+-6 -2 2 -4 -2 6 9 0.8 1.5 0.0001
+
+Output:
+
+For the Bisection Method: 13 number of iterations and 1.0549 is the root.
+
+For the Secant Method: 8 number of iterations and 1.05496 is the root.
+
+For the Hybrid Method: 7 number of iterations and 1.05496 is the root.
+
+
+
+Input:
+
+ 3 -9 4 2 3 0.0001
+
+Output:
+
+For the Bisection Method: 14 number of iterations and 2.45746 is the root.
+
+For the Secant Method: 5 number of iterations and 2.45743 is the root.
+
+For the Hybrid Method: 6 number of iterations and 2.45743 is the root.
+
+Some notes regarding the project:
+
+Finding the exact root for each method is not necessary but you need to stay in the tolerance value. 2.45746 and 2.45746 with the tolerance value of 0.0001 are adequate but it cannot be 2.457 and 2.458 for instance.
+You do not need to find the same root results with the sample cases, since these results can vary with the methods you have employed in the project. However, you need to be in the tolerance interval.
+The iteration number of the hybrid method includes the 2 bisection iterations as well.
+You can encounter some extreme cases where the secant method diverges from the root or converges to another far root. Although you can fix these problems by adding additional features to your program, you are not asked to implement such features. Test cases will not include any extreme case so you do not need to think about them.
