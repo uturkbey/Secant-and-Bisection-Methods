@@ -1,4 +1,4 @@
-# Secant-and-Bisection-Methods-Public
+# Secant-and-Bisection-Methods
 This C++ program is designed for finding the zero of a polynomial in a given interval and tolerence using Bisection, Secant and Hybrid Methods.
 
 In order to run the program:
